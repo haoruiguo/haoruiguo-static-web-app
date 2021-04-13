@@ -63,13 +63,12 @@ class YouTubeVideo extends React.Component {
   };
 
   onPlayerStateChange(event) {
-      if (event.data == window.YT.PlayerState.PLAYING) {
+      if (event.data === window.YT.PlayerState.PLAYING) {
         console.log("video playing");
         this.props.trackVideoSignal('piVideo')
       }
   }
   render = () => {
-    const { id } = this.props;
     return (
       <div>
         <div id={`piVideo`}/>
@@ -100,7 +99,7 @@ class ImageButton extends React.Component {
 function Image() {
   return (
     <a id="imageRef" href="https://dynamics.microsoft.com/en-us/ai/product-insights/">
-      <img id="piImage" src='/image.png' alt="PI Image" width="960" height="540"/>
+      <img id="piImage" src='/image.png' alt="PI" width="960" height="540"/>
     </a>
   )
 }
